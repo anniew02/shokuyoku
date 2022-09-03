@@ -19,9 +19,6 @@ const Navbar = () => {
             <NavLink to="/restaurant-list" activeStyle>
                 Restaurants
             </NavLink>
-            {/* <NavLink to="/review-list" activeStyle>
-                Reviews
-            </NavLink> */}
             <NavBtnLink to="/sign-in">Sign In</NavBtnLink>
         </NavMenu>
       </Nav>

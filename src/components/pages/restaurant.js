@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { RiCloseCircleLine } from 'react-icons/ri';
 import { TiEdit } from 'react-icons/ti';
 import AddRestaurant from './add-restaurant';
+// import Rating from './rating';
 
-function Restaurant({restaurants, hasBeen, removeRestaurant, editRestaurant }) {
+function Restaurant({restaurants, haveBeen, removeRestaurant, editRestaurant }) {
   const [edit, setEdit] = useState({
     id: null,
     value: ''
@@ -26,16 +27,12 @@ function Restaurant({restaurants, hasBeen, removeRestaurant, editRestaurant }) {
       className={restaurant.haveBeen ? 'restaurant-row been' : 'restaurant-row'}
       key={index}
     >
-      <div key={restaurant.id} onClick={() => hasBeen(restaurant.id)}>
+      <div key={restaurant.id} onClick={() => haveBeen(restaurant.id)}>
         {restaurant.text}
       </div>
 
-      {/* <div class="rating">
-        <div rating="1"></div>
-        <div rating="2"></div>
-        <div rating="3"></div>
-        <div rating="4"></div>
-        <div rating="5"></div>
+      {/* <div>
+        <Rating />
       </div> */}
 
       <div className='icons'>

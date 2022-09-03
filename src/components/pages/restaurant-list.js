@@ -44,12 +44,7 @@ function RestaurantList() {
 
   return (
     <div>
-      <div style={{
-        display: 'flex', 
-        justifyContent: 'center', 
-        alignItems: 'center', 
-        height: '20vh'
-        }}>
+      <div>
         <h1>Restaurants</h1>
       </div>
 
@@ -59,11 +54,23 @@ function RestaurantList() {
         alignItems: 'center', 
         height: '10vh'
         }}>
-        <AddRestaurant onSubmit={addRestaurant}/>
+        <AddRestaurant 
+          onSubmit={addRestaurant}
+        />
       </div>
 
-      <div>
-        <Restaurant restaurants={restaurants} haveBeen={haveBeen} removeRestaurant={removeRestaurant} editRestaurant={editRestaurant} />
+      <div style={{
+        display: 'flex', 
+        justifyContent: 'center', 
+        alignItems: 'center',
+        height: '10vh'
+        }}>
+        <Restaurant 
+          restaurants={restaurants} 
+          haveBeen={haveBeen} 
+          removeRestaurant={removeRestaurant} 
+          editRestaurant={editRestaurant} 
+        />
       </div>
     </div>
 
